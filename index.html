@@ -1,0 +1,2298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizen Training Solutions | We Build Revenue Capability That Scales</title>
+    <meta name="description"
+        content="Kaizen Training Solutions (KTS) is your Sales Capability Transformation Partner — designing and scaling high-performance sales ecosystems that drive predictable revenue growth.">
+    <meta name="keywords"
+        content="Sales training company India, Sales performance consulting, Sales training programs for companies, Corporate sales training India, B2B sales training, FMCG sales training, Enterprise sales training, Inside sales training, Field sales training, Sales leadership training, Revenue acceleration consulting, Sales capability building, Sales coaching company, Sales transformation programs, Sales excellence consulting">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#ec693d',
+                        'brand-dark': '#d3542a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-heading {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        /* FAQ Animation */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-content.active {
+            /* max-height will be set by JS */
+            display: block;
+        }
+
+        .faq-inner {
+            /* padding and border are handled here */
+            padding: 1rem;
+        }
+
+        /* Marquee Styles */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .marquee-container::before,
+        .marquee-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(to right, #2a2b2c, transparent);
+        }
+
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(to left, #1f2224, transparent);
+        }
+
+        .marquee-content,
+        .marquee-content-right {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            padding-right: 4rem;
+            min-width: 100%;
+            flex: 0 0 auto;
+            will-change: transform;
+            flex-wrap: nowrap;
+        }
+
+        .marquee-content {
+            animation: scroll-left 40s linear infinite;
+        }
+
+        .marquee-content-right {
+            animation: scroll-right 40s linear infinite;
+        }
+
+        .marquee-item {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 60px;
+        }
+
+        .marquee-item img {
+            max-height: 70%;
+            max-width: 85%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .marquee-item img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* Testimonial Truncation Styles */
+        .testimonial-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-text.expanded {
+            -webkit-line-clamp: unset;
+            line-clamp: unset;
+            display: block;
+        }
+
+        .testimonial-card {
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        /* Hero Form Minimalist Styles */
+        .hero-input {
+            background: transparent !important;
+            border: none !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+            border-radius: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            color: #1a202c !important;
+            transition: border-color 0.3s;
+        }
+
+        .hero-input:focus {
+            border-bottom-color: #ec693d !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .hero-input::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-label {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .no-gradient::before,
+        .no-gradient::after {
+            display: none !important;
+        }
+
+        /* Journey Animation */
+        @keyframes journey-line-fill {
+            0% {
+                height: 0%;
+            }
+
+            100% {
+                height: 100%;
+            }
+        }
+
+        @keyframes step-pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(236, 105, 61, 0.3);
+            }
+
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 25px rgba(236, 105, 61, 0.6);
+                border-color: #ec693d;
+            }
+        }
+
+        @keyframes text-highlight {
+
+            0%,
+            100% {
+                color: #9ca3af;
+                opacity: 0.6;
+            }
+
+            50% {
+                color: #ffffff;
+                opacity: 1;
+                transform: translateX(10px);
+            }
+        }
+
+        .journey-step-active {
+            animation: step-pulse 5s infinite;
+        }
+
+        .journey-text-active {
+            animation: text-highlight 5s infinite;
+        }
+
+        .journey-line-fill {
+            animation: journey-line-fill 5s infinite linear;
+        }
+
+        /* Market Slider Premium Styles */
+        .market-slider-container {
+            overflow: hidden;
+            display: flex;
+            user-select: none;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+
+        .market-track {
+            display: flex;
+            width: max-content;
+            animation: marquee-scroll 60s linear infinite;
+        }
+
+        .market-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee-scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .market-card {
+            width: 320px;
+            height: 400px;
+            flex-shrink: 0;
+            margin: 0 12px;
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (max-width: 640px) {
+            .market-card {
+                width: 260px;
+                height: 340px;
+                margin: 0 8px;
+            }
+        }
+
+        .market-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+        }
+
+        .market-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .market-card:hover .market-image {
+            transform: scale(1.1);
+        }
+
+        .market-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.8));
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: background 0.5s ease;
+        }
+
+        .market-card:hover .market-overlay {
+            background: linear-gradient(to bottom, rgba(236, 105, 61, 0.2) 0%, rgba(0, 0, 0, 0.9) 80%);
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 max-w-7xl py-4 flex justify-between items-center">
+
+            <a href="#" class="flex items-center">
+                <img src="https://kaizentrainingsolutions.com/assets/img/logos/KTSOB.png"
+                    alt="Kaizen Training Solutions" class="h-12 md:h-14">
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <button onclick="scrollToTop()"
+                    class="bg-brand text-white px-6 py-2 rounded-full font-semibold hover:bg-brand-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Contact Us
+                </button>
+            </div>
+
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 overflow-hidden">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <button onclick="scrollToTop()" class="bg-brand text-white px-6 py-2 rounded-full w-full">Contact
+                    Us</button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home"
+        class="relative pt-20 pb-8 md:pt-24 md:pb-8 bg-white overflow-hidden md:h-screen flex flex-col justify-center border-b border-gray-100">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                alt="Corporate Training" class="w-full h-full object-cover ">
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 md:via-black/80 to-black/60 md:bg-gradient-to-r md:from-black/95 md:to-black/40">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="grid md:grid-cols-2 gap-10 items-center pt-10 sm:pt-0">
+                <div class="text-left py-2">
+                    <h1
+                        class="text-4xl md:text-5xl font-bold text-white leading-[1.1] md:leading-[1.1] mb-6 animate-fade-in-up tracking-tighter">
+                        We Build Revenue Capability <br><span class="text-brand">That Scales.</span>
+                    </h1>
+
+                    <p class="text-lg md:text-lg text-white mb-8 max-w-2xl leading-relaxed opacity-90">
+                        Kaizen Training Solutions (KTS) is your Sales Capability Transformation Partner — designing and
+                        scaling high-performance sales ecosystems that drive predictable revenue growth by helping
+                        organizations improve win rates, shorten sales cycles, and build scalable revenue systems.
+                        <span class="block mt-2 font-semibold text-sm">We design practical, execution-focused sales
+                            capability frameworks aligned to your business goals. We build sales engines that convert,
+                            close, and scale.</span>
+                        <span class="block mt-2 text-brand font-bold text-sm">👉 From first conversation → signed
+                            contract → revenue expansion</span>
+                    </p>
+
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4 mb-8">
+                        <button onclick="scrollToTop()"
+                            class="bg-brand text-white px-8 py-3 rounded-full font-bold hover:bg-brand-dark transition shadow-lg hover:shadow-brand/20 transform hover:-translate-y-1 text-center text-sm">
+                            Book a Sales Capability Strategy Call
+                        </button>
+                        <a href="#approach"
+                            class="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-full font-bold hover:bg-white/20 transition shadow-lg transform hover:-translate-y-1 text-center text-sm flex items-center justify-center">
+                            Explore Our Transformation Approach
+                        </a>
+                    </div>
+
+
+                    <!-- <div class="pt-6">
+                        <button onclick="scrollToTop()"
+                            class="bg-brand text-white px-10 py-4 rounded-full font-bold hover:bg-brand-dark transition shadow-lg hover:shadow-brand/20 transform hover:-translate-y-1 block md:inline-block text-center uppercase tracking-widest text-sm">
+                            Schedule Your Revenue Diagnostic
+                        </button>
+                    </div> -->
+
+
+                </div>
+
+                <div
+                    class="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200 shadow-xl w-full max-w-md mx-auto md:ml-auto md:mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 tracking-tight">BOOK YOUR REVENUE STRATEGY CALL
+                    </h3>
+                    <form id="hero-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 gap-6">
+                            <div>
+                                <label class="hero-label">Name*</label>
+                                <input type="text" name="first_name" required class="w-full hero-input" placeholder="">
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <label class="hero-label">Work Email*</label>
+                            <input type="email" name="user_email" required class="w-full hero-input" placeholder="">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="hero-label">Contact*</label>
+                                <div
+                                    class="flex items-center space-x-2 border-b border-gray-300 focus-within:border-brand transition">
+                                    <span class="text-gray-900 pb-1 flex items-center text-xs flex-shrink-0">
+                                        <img src="https://flagcdn.com/w20/in.png" alt="India" class="mr-1 w-4">
+                                        +91
+                                    </span>
+                                    <input type="tel" name="user_phone" required maxlength="10"
+                                        class="flex-1 hero-input !border-b-0 text-sm pb-1" placeholder="">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="hero-label">Designation*</label>
+                                <input type="text" name="designation" required class="w-full hero-input text-sm"
+                                    placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="hero-label">Company*</label>
+                                <input type="text" name="company_name" required class="w-full hero-input text-sm"
+                                    placeholder="">
+                            </div>
+                            <div>
+                                <label class="hero-label">Industry*</label>
+                                <input type="text" name="industry" required list="industry-list"
+                                    class="w-full hero-input text-sm" placeholder="">
+                            </div>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-brand text-white py-3 rounded-sm font-bold hover:bg-brand-dark transition-all shadow-xl tracking-widest text-xs uppercase mt-2">
+                            SUBMIT
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Marquee Section -->
+    <div class="py-12 bg-gray-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-8">
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Trusted by Global Revenue
+                    Leaders</p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold text-gray-600">
+                    <span class="bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">15+ years</span>
+                    <span class="bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">8 lakh+ people
+                        trained</span>
+                    <span class="bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">71+ locations</span>
+                    <span class="bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">480+ cities & sub
+                        cities</span>
+                    <span class="bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">1000+ trainers,
+                        consultants & coaches</span>
+                </div>
+                <div class="mt-4 text-brand font-bold text-sm uppercase tracking-widest">
+                    Focused Outcome: Stronger pipelines | Improved conversions | Predictable growth | Scalable &
+                    Sustainable Revenue Growth
+                </div>
+            </div>
+            <div class="marquee-container no-gradient !bg-transparent !p-0">
+                <div class="marquee-content !gap-12 md:!gap-20 !animation-duration-[40s]">
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/bharti-airtel.png"
+                            alt="Airtel">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/client/coca_cola.jpg" alt="Coca Cola">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/deloitte.png" alt="Deloitte">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/aws.png" alt="AWS">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/kora.png" alt="Kora">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/cognex.png" alt="Cognex">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/client/tpci.jpg" alt="TPCI">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/client/tata.jpg" alt="Tata">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/client/v5_global.png" alt="V5 Global">
+                    </div>
+                    <!-- Duplicate for loop -->
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/bharti-airtel.png"
+                            alt="Airtel">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/client/coca_cola.jpg" alt="Coca Cola">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/deloitte.png" alt="Deloitte">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/aws.png" alt="AWS">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/clients/kora.png" alt="Kora">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Revenue Leakage Section -->
+    <section id="diagnostic" class="py-20 bg-gray-900 border-b border-white/5 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div
+                class="absolute top-0 left-0 w-96 h-96 bg-brand rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-96 h-96 bg-brand-dark rounded-full blur-[120px] translate-x-1/2 translate-y-1/2">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="grid md:grid-cols-5 gap-16 items-center">
+                <div class="md:col-span-3">
+                    <p class="text-brand font-bold mb-2 tracking-widest uppercase text-xs">The Problem We Solve</p>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight tracking-tight">
+                        When Revenue Growth Slows, <br>the Issue Is Often <span class="text-brand">Execution.</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-10 leading-relaxed font-light">
+                        We fix the real revenue leaks. If revenue is not growing predictably — your sales system is
+                        broken. These are not training gaps alone — they are <span
+                            class="text-white font-semibold">sales capability gaps.</span>
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-brand/50 transition duration-300">
+                            <i class="fa-solid fa-arrow-trend-down text-brand text-2xl mb-4"></i>
+                            <h4 class="text-white font-bold mb-2">Low & inconsistent win rates</h4>
+                            <p class="text-gray-500 text-sm">Converting opportunities at sub-optimal levels.</p>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-brand/50 transition duration-300">
+                            <i class="fa-solid fa-hourglass-half text-brand text-2xl mb-4"></i>
+                            <h4 class="text-white font-bold mb-2">Long sales cycles</h4>
+                            <p class="text-gray-500 text-sm">Deals getting stuck in the pipeline for too long.</p>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-brand/50 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-chart text-brand text-2xl mb-4"></i>
+                            <h4 class="text-white font-bold mb-2">Weak discovery & poor qualification</h4>
+                            <p class="text-gray-500 text-sm">Poor qualification leading to wasted resources.</p>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-brand/50 transition duration-300">
+                            <i class="fa-solid fa-chart-line text-brand text-2xl mb-4"></i>
+                            <h4 class="text-white font-bold mb-2">Pipeline stagnation & visibility challenges</h4>
+                            <p class="text-gray-500 text-sm">Lack of deal velocity and inconsistent closing.</p>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-brand/50 transition duration-300">
+                            <i class="fa-solid fa-user-xmark text-brand text-2xl mb-4"></i>
+                            <h4 class="text-white font-bold mb-2">Inconsistent closing behavior</h4>
+                            <p class="text-gray-500 text-sm">Revenue unpredictability due to erratic behavior.</p>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-brand/50 transition duration-300">
+                            <i class="fa-solid fa-bullseye text-brand text-2xl mb-4"></i>
+                            <h4 class="text-white font-bold mb-2">Forecasting Gaps</h4>
+                            <p class="text-gray-500 text-sm">Large variance between forecast and actuals.</p>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-brand/50 transition duration-300">
+                            <i class="fa-solid fa-bolt text-brand text-2xl mb-4"></i>
+                            <h4 class="text-white font-bold mb-2">Low deal velocity</h4>
+                            <p class="text-gray-500 text-sm">Deals moving too slowly through stages.</p>
+                        </div>
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-brand/50 transition duration-300">
+                            <i class="fa-solid fa-vial text-brand text-2xl mb-4"></i>
+                            <h4 class="text-white font-bold mb-2">Weak frontline execution</h4>
+                            <p class="text-gray-500 text-sm">Frontline struggle in high-stakes moments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 relative">
+                    <div
+                        class="bg-gradient-to-br from-brand/20 to-black p-10 rounded-3xl border border-white/10 shadow-2xl">
+                        <p class="text-brand font-bold mb-6 tracking-widest uppercase text-sm">What We Do (Positioning)
+                        </p>
+                        <div class="space-y-6 relative z-10">
+                            <h3 class="text-2xl font-bold text-white mb-4">We Build Sales Capability Systems</h3>
+                            <p class="text-gray-300 text-sm mb-4">KTS works at the intersection of:</p>
+                            <div class="bg-white/10 p-4 rounded-lg border border-white/20 mb-6 text-center">
+                                <span class="text-brand font-bold">Sales Skills</span> <span
+                                    class="text-white mx-2">+</span>
+                                <span class="text-brand font-bold">Sales Process</span> <span
+                                    class="text-white mx-2">+</span>
+                                <span class="text-brand font-bold">Manager Capability</span> <span
+                                    class="text-white mx-2">+</span>
+                                <span class="text-brand font-bold">Execution Discipline</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">So your teams can consistently move from:</p>
+
+                            <div class="flex flex-col space-y-4 relative">
+                                <div class="absolute left-4 top-4 bottom-4 w-0.5 bg-brand/50"></div>
+                                <div class="flex items-center space-x-4 relative">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold z-10 shadow-[0_0_10px_rgba(236,105,61,0.5)]">
+                                        1</div>
+                                    <span class="text-white font-semibold">Lead</span>
+                                </div>
+                                <div class="flex items-center space-x-4 relative">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold z-10 shadow-[0_0_10px_rgba(236,105,61,0.5)]">
+                                        2</div>
+                                    <span class="text-white font-semibold">Qualified Opportunity</span>
+                                </div>
+                                <div class="flex items-center space-x-4 relative">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold z-10 shadow-[0_0_10px_rgba(236,105,61,0.5)]">
+                                        3</div>
+                                    <span class="text-white font-semibold">Deal Closure</span>
+                                </div>
+                                <div class="flex items-center space-x-4 relative">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs font-bold z-10 shadow-[0_0_10px_rgba(236,105,61,0.5)]">
+                                        4</div>
+                                    <span class="text-white font-semibold">Account Growth</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-6 bg-brand/10 border border-brand/20 rounded-xl">
+                            <p class="text-white font-bold italic">"Learning without execution is entertainment.
+                                Execution without structure is chaos. KTS builds both."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Services Section -->
+    <style>
+        .expanding-cards-container {
+            display: flex;
+            width: 100%;
+            height: 600px;
+            gap: 10px;
+        }
+
+        .expanding-card {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            color: #fff;
+            cursor: pointer;
+            flex: 1;
+            margin: 0;
+            position: relative;
+            transition: flex 0.7s cubic-bezier(0.05, 0.6, 0.4, 0.9);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .expanding-card:hover,
+        .expanding-card.active {
+            flex: 6;
+        }
+
+        @media (max-width: 768px) {
+            .expanding-cards-container {
+                flex-direction: column;
+                height: auto;
+                min-height: 800px;
+            }
+
+            .expanding-card {
+                width: 100%;
+                flex: 0 0 70px;
+                /* Standard collapsed height on mobile */
+                margin-bottom: 5px;
+            }
+
+            .expanding-card.active {
+                flex: 1 0 400px;
+                /* Expanded height on mobile */
+            }
+
+            /* Horizontal layout for collapsed content on mobile */
+            .collapsed-content {
+                flex-direction: row !important;
+                justify-content: flex-start !important;
+                padding-left: 20px;
+                gap: 15px;
+            }
+
+            .collapsed-icon {
+                font-size: 1.5rem !important;
+                margin-bottom: 0 !important;
+            }
+
+            .card-title-vertical {
+                writing-mode: horizontal-tb !important;
+                transform: none !important;
+                font-size: 1rem !important;
+                letter-spacing: 1px !important;
+            }
+        }
+
+        .card-content {
+            opacity: 0;
+            transition: opacity 0.3s ease-in 0.4s;
+            transform: translateY(20px);
+            position: relative;
+            z-index: 10;
+        }
+
+        .expanding-card:hover .card-content,
+        .expanding-card.active .card-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Collapsed State Content */
+        .collapsed-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: opacity 0.3s ease-out;
+            opacity: 1;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        .expanding-card:hover .collapsed-content,
+        .expanding-card.active .collapsed-content {
+            opacity: 0;
+        }
+
+        .collapsed-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        .card-title-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            white-space: nowrap;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Expanded Title */
+        .card-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .card-number {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Individual Card Background Images */
+        .card-1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.istockphoto.com/id/863553004/photo/happy-businessman-writing-on-whiteboard-during-business-presentation-in-the-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=dv0qlKoNUAVgRZk6dnewdw90cmFCYyYmoPSyJZTDEVo=');
+        }
+
+        .card-2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2650&auto=format&fit=crop');
+        }
+
+        .card-3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2600&auto=format&fit=crop');
+        }
+
+        .card-4 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2600&auto=format&fit=crop');
+        }
+
+        .card-5 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2600&auto=format&fit=crop');
+        }
+
+        .card-6 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.istockphoto.com/id/1357158379/photo/a-group-of-young-business-people-is-enjoying-team-building-games-during-a-break-at-work.webp?a=1&b=1&s=612x612&w=0&k=20&c=E78E2lB-5_8eOTOezyIzLD5hBjfxw6cYD90_JszbOeA=');
+        }
+
+        .card-7 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.istockphoto.com/id/1493832785/photo/quality.webp?a=1&b=1&s=612x612&w=0&k=20&c=RV8kij0Uu6-LEi9aREXPtxY2Zbka0cNs4vXOB6Yok_s=');
+        }
+
+        .card-8 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2600&auto=format&fit=crop');
+        }
+
+        .expanding-card {
+            transition: all 0.7s cubic-bezier(0.05, 0.6, 0.4, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .expanding-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+
+    <!-- Our Transformation Journey -->
+    <section id="transformation-journey" class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16">
+                <p class="text-brand font-bold mb-2 tracking-widest uppercase text-xs">Our Transformation Journey</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">A Hyper-Personalised | Structured |
+                    Measurable | Tailored to Your Business</h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-6 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 border-b pb-4">ENGAGEMENT TYPE 1<br><span
+                            class="text-brand text-base">Per Day Sessions</span></h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand mt-1 mr-3"></i> <span>Full
+                                day workshops</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand mt-1 mr-3"></i> <span>Half
+                                day workshops</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand mt-1 mr-3"></i> <span>Upto 2
+                                hrs Capsule / micro workshops</span></li>
+                    </ul>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 border-b pb-4">ENGAGEMENT TYPE 2<br><span
+                            class="text-brand text-base">Sales Events</span></h3>
+                    <p class="text-gray-600">High-impact sales kick-offs, revenue summits, and leadership offsites
+                        designed for execution alignment.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all transform hover:-translate-y-2 border-t-4 border-t-brand">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 border-b pb-4">ENGAGEMENT TYPE 3<br><span
+                            class="text-brand text-base">Journey based Sessions</span></h3>
+                    <p class="text-gray-600 italic">Structured, multi-phase capability building for long-term impact.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 z-0 opacity-20">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-brand rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2">
+                    </div>
+                </div>
+                <div class="relative z-10 grid md:grid-cols-3 gap-10">
+                    <div>
+                        <div class="text-brand font-black text-4xl mb-4">01</div>
+                        <h4 class="text-xl font-bold mb-3">Short-Term (0–90 Days)<br><span
+                                class="text-gray-400 text-sm font-normal">Diagnose & Stabilise</span></h4>
+                        <ul class="space-y-2 text-sm text-gray-300 mb-4">
+                            <li>• Sales system diagnostic & revenue leakage audit</li>
+                            <li>• Pipeline & conversion analysis</li>
+                            <li>• Quick-win capability interventions</li>
+                            <li>• Sales playbook alignment</li>
+                            <li>• Manager activation</li>
+                        </ul>
+                        <div class="bg-white/10 p-3 rounded-lg border border-white/20 text-xs font-bold text-brand">👉
+                            Outcome: Immediate improvement in conversions & pipeline movement</div>
+                    </div>
+                    <div>
+                        <div class="text-brand font-black text-4xl mb-4">02</div>
+                        <h4 class="text-xl font-bold mb-3">Medium-Term (3–6 Months)<br><span
+                                class="text-gray-400 text-sm font-normal">Build & Standardise</span></h4>
+                        <ul class="space-y-2 text-sm text-gray-300 mb-4">
+                            <li>• Role-based capability development</li>
+                            <li>• Structured sales frameworks</li>
+                            <li>• Manager coaching systems</li>
+                            <li>• Live deal & pipeline interventions & review</li>
+                            <li>• Sales performance rhythm & governance</li>
+                        </ul>
+                        <div class="bg-white/10 p-3 rounded-lg border border-white/20 text-xs font-bold text-brand">👉
+                            Outcome: Predictable execution & improved win rates</div>
+                    </div>
+                    <div>
+                        <div class="text-brand font-black text-4xl mb-4">03</div>
+                        <h4 class="text-xl font-bold mb-3">Long-Term (6–12 Months)<br><span
+                                class="text-gray-400 text-sm font-normal">Scale & Institutionalise</span></h4>
+                        <ul class="space-y-2 text-sm text-gray-300 mb-4">
+                            <li>• Sales capability architecture across teams</li>
+                            <li>• Leadership development for revenue ownership</li>
+                            <li>• Culture & accountability</li>
+                            <li>• Integrated revenue frameworks</li>
+                            <li>• Performance tracking mechanisms</li>
+                        </ul>
+                        <div class="bg-white/10 p-3 rounded-lg border border-white/20 text-xs font-bold text-brand">👉
+                            Outcome: Scalable, self-sustaining revenue engine</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customisation & Support -->
+    <section class=" bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Customisation -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">CUSTOMISATION THAT FITS YOUR BUSINESS
+                    </h2>
+                    <p class="text-brand font-bold mb-6 text-lg">Hyper-Personalised. Fully Customised. Outcome-Driven.
+                    </p>
+                    <p class="text-gray-600 mb-6">Every engagement is tailored to:</p>
+                    <ul class="space-y-4 text-gray-700 font-medium mb-8">
+                        <li class="flex items-center bg-gray-50 p-3 rounded-lg"><i
+                                class="fa-solid fa-industry text-brand mr-4 text-xl w-6"></i> Your industry and market
+                            conditions</li>
+                        <li class="flex items-center bg-gray-50 p-3 rounded-lg"><i
+                                class="fa-solid fa-route text-brand mr-4 text-xl w-6"></i> Sales cycle complexity</li>
+                        <li class="flex items-center bg-gray-50 p-3 rounded-lg"><i
+                                class="fa-solid fa-users text-brand mr-4 text-xl w-6"></i> Deal size and buyer profiles
+                        </li>
+                        <li class="flex items-center bg-gray-50 p-3 rounded-lg"><i
+                                class="fa-solid fa-sitemap text-brand mr-4 text-xl w-6"></i> Team structure and maturity
+                        </li>
+                        <li class="flex items-center bg-gray-50 p-3 rounded-lg"><i
+                                class="fa-solid fa-arrow-trend-up text-brand mr-4 text-xl w-6"></i> Revenue goals and
+                            growth plans</li>
+                    </ul>
+                    <div class="inline-block bg-brand/10 text-brand px-6 py-3 rounded-full font-bold">👉 Designed to be
+                        relevant, practical, and implementable</div>
+                </div>
+
+                <!-- Pre & Post Support -->
+                <div class="bg-gray-50 p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">PRE & POST JOURNEY SUPPORT</h2>
+                    <p class="text-brand font-bold mb-8 text-lg">We Ensure Performance Moves</p>
+
+                    <div class="space-y-6 relative border-l-2 border-brand/30 ml-3 pl-6">
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[35px] top-1 w-4 h-4 rounded-full bg-brand shadow-[0_0_10px_rgba(236,105,61,0.5)]">
+                            </div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">Before (Pre-Journey)</h4>
+                            <p class="text-sm text-gray-600">Business & Sales diagnostic | Stakeholder alignment |
+                                Business outcome mapping | Baseline metrics definition | Capability gap analysis | Goal
+                                and KPI definition | Custom journey design</p>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[35px] top-1 w-4 h-4 rounded-full bg-brand shadow-[0_0_10px_rgba(236,105,61,0.5)]">
+                            </div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">During (Execution Phase)</h4>
+                            <p class="text-sm text-gray-600">Live deal reviews | Call, field & deal coaching | Real
+                                pipeline interventions | Continuous feedback loops | Interactive training sessions |
+                                Manager enablement</p>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[35px] top-1 w-4 h-4 rounded-full bg-brand shadow-[0_0_10px_rgba(236,105,61,0.5)]">
+                            </div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">After (Post-Journey)</h4>
+                            <p class="text-sm text-gray-600">Performance dashboards | Reinforcement modules | Manager
+                                coaching frameworks | Quarterly business reviews | Continuous improvement roadmap |
+                                Optimisation cycles | Focus on application, reinforcement, and continuity</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center bg-gray-900 text-white py-3 rounded-xl font-bold shadow-md">👉 We stay
+                        till performance sustains and scales</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offerings" class="text-gray-900 leading-relaxed bg-white pt-10 md:pt-16">
+        <div class="container mx-auto px-4 max-w-[1400px]">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mt-2">Built for Real Sales Execution — Not
+                    Classroom Entertainment</h2>
+                <div class="w-24 h-1 bg-brand mx-auto mt-4 rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-4 max-w-3xl mx-auto italic">"Learning without execution is
+                    entertainment. Execution without structure is chaos. KTS builds both."</p>
+            </div>
+
+            <div class="expanding-cards-container !h-[500px]">
+                <!-- Model 1 -->
+                <div class="expanding-card card-1 active" onclick="expandCard(this)">
+                    <div class="collapsed-content">
+                        <span class="card-title-vertical text-white">Performance Classrooms</span>
+                    </div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-chalkboard-user text-brand text-4xl mb-4"></i>
+                        <span class="card-number">01</span>
+                        <h3>Performance Classrooms</h3>
+                        <p class="text-lg mt-2 opacity-90 font-semibold text-brand">Classroom | Virtual | Hybrid</p>
+                        <p class="text-sm mt-2 opacity-80">High-impact learning for skill, structure, and selling
+                            frameworks. Designed for performance-first results.</p>
+                    </div>
+                </div>
+
+                <!-- Model 2 -->
+                <div class="expanding-card card-2" onclick="expandCard(this)">
+                    <div class="collapsed-content">
+                        <span class="card-title-vertical text-white">On-the-Job Revenue Coaching</span>
+                    </div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-microphone-lines text-brand text-4xl mb-4"></i>
+                        <span class="card-number">02</span>
+                        <h3>On-the-Job Revenue Coaching</h3>
+                        <p class="text-sm mt-2 opacity-80">Live deal reviews • Call coaching • Field accompaniment •
+                            Real pipeline work. Training inside real business, not in isolation.</p>
+                    </div>
+                </div>
+
+                <!-- Model 3 -->
+                <div class="expanding-card card-3" onclick="expandCard(this)">
+                    <div class="collapsed-content">
+                        <span class="card-title-vertical text-white">Sales Execution Intensives</span>
+                    </div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-fire text-brand text-4xl mb-4"></i>
+                        <span class="card-number">03</span>
+                        <h3>Sales Execution Intensives</h3>
+                        <p class="text-sm mt-2 opacity-80">Outbound drives • Offsites • Frontline execution programs.
+                            Build ownership, hunger, and competitive culture.</p>
+                    </div>
+                </div>
+
+                <!-- Model 4 -->
+                <div class="expanding-card card-4" onclick="expandCard(this)">
+                    <div class="collapsed-content">
+                        <span class="card-title-vertical text-white">Revenue Events & SKOs</span>
+                    </div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-trophy text-brand text-4xl mb-4"></i>
+                        <span class="card-number">04</span>
+                        <h3>Revenue Events & Sales Kick-offs</h3>
+                        <p class="text-sm mt-2 opacity-80">Annual kick-offs • Leadership meets • Revenue summits.
+                            Alignment, energy, direction, and execution clarity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Transform Section -->
+    <section id="who-we-build" class="py-20 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Who We Build</h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-6 rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We don’t just train individuals; we build
+                    revenue-generating assets across every layer of your organization.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Target 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div
+                        class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sales Leaders & Revenue Heads</h3>
+                    <p class="text-gray-500 text-sm mb-6">For CXOs, CROs, VPs, and Business Heads responsible for:</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Forecast
+                            accuracy</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Revenue
+                            predictability</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Team
+                            productivity</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Pipeline quality
+                        </li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Market expansion
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Target 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div
+                        class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sales Teams</h3>
+                    <p class="text-gray-500 text-sm mb-6">Inside sales, field sales, enterprise sales, hybrid teams.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Sharper
+                            conversations</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Higher
+                            conversions</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Faster closures
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Target 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div
+                        class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Key Account Managers</h3>
+                    <p class="text-gray-500 text-sm mb-6">For long-cycle, strategic, enterprise and institutional deals.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Shifting from
+                            relationship managers</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Shifting towards
+                            revenue drivers</li>
+                    </ul>
+                </div>
+
+                <!-- Target 4 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div
+                        class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Customer Success & Service Teams</h3>
+                    <p class="text-gray-500 text-sm mb-6">Turn service conversations into revenue conversations.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Upsell &
+                            Cross-sell</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Expansion &
+                            Retention</li>
+                    </ul>
+                </div>
+
+                <!-- Target 5 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div
+                        class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6">
+                        <i class="fa-solid fa-person-walking-luggage"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Feet-On-Street (FOS) / Sales Representatives</h3>
+                    <p class="text-gray-500 text-sm mb-6">Frontline warriors who build trust on the ground.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Relationship
+                            building</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2"></i> Revenue
+                            generation</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-brand p-8 rounded-2xl shadow-xl flex flex-col justify-center items-center text-center text-white">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Transform Your Team?</h3>
+                    <button onclick="scrollToTop()"
+                        class="bg-white text-brand font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition shadow-lg">Get
+                        Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Expertise Section (Stock Image Slider) -->
+    <section id="markets" class=" bg-gray-50 relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-7xl relative z-20 mb-16">
+            <div class="text-center">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 mb-6">
+                    <span class="text-brand text-xs font-bold uppercase tracking-[0.2em]">Market Expertise</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+                    If You Sell Anything — <span class="text-brand">We Can Scale It</span>
+                </h2>
+                <div class="w-20 h-1 bg-brand/30 mx-auto mb-8 rounded-full"></div>
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto font-light mb-10 leading-relaxed italic">
+                    We work across: Retail | Channel | GT | MT | B2B | Enterprise | Inside Sales | Field Sales |
+                    Institutional | Government | Direct | Digital | Rural | Project Sales | Post-Sales Revenue
+                </p>
+            </div>
+
+            <!-- Infinite Slider -->
+            <div class="market-slider-container">
+                <div class="market-track">
+                    <!-- Market Card 1: Retail -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
+                            alt="Retail Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Retail Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Scaling consumer pull & store
+                                performance</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 2: Channel -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                            alt="Channel Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Channel Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Building high-velocity partner
+                                networks</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 3: General Trade -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=800&q=80"
+                            alt="General Trade" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">General Trade</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Dominating fragmented
+                                distribution</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 4: Modern Trade -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=800&q=80"
+                            alt="Modern Trade" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Modern Trade</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Winning in structured retail
+                                environments</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 5: B2B Enterprise -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                            alt="B2B Enterprise" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">B2B/Enterprise</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Navigating complex buying cycles
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Market Card 6: Inside Sales -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80"
+                            alt="Inside Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Inside Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Maximizing digital & remote
+                                conversions</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 7: Field Sales -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
+                            alt="Field Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Field Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Frontline execution & market
+                                penetration</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 8: Institutional -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80"
+                            alt="Institutional" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Institutional</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Cracking large-scale corporate
+                                deals</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 9: Govt/PSU -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=800&q=80"
+                            alt="Govt PSU" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Govt/PSU</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Bidding & winning public sector
+                                contracts</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 10: Direct Sales -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&q=80"
+                            alt="Direct Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Direct Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">High-impact person-to-person
+                                selling</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 11: Rural Sales -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                            alt="Rural Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Rural Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Unlocking bottom-of-pyramid
+                                potential</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 12: Project Sales -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+                            alt="Project Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Project Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Managing long-lifecycle project
+                                mandates</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 13: Digital/E-comm -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                            alt="Digital E-comm" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Digital/E-comm</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Optimizing online revenue funnels
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Market Card 14: Key Account -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80"
+                            alt="Key Account" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Key Account</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Strategic growth in high-value
+                                accounts</p>
+                        </div>
+                    </div>
+                    <!-- Market Card 15: Post-Sales -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+                            alt="Post Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Post-Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Expansion, retention & referral
+                                growth</p>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Set for Infinite Scroll -->
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
+                            alt="Retail Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Retail Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Scaling consumer pull & store
+                                performance</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                            alt="Channel Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Channel Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Building high-velocity partner
+                                networks</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=800&q=80"
+                            alt="General Trade" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">General Trade</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Dominating fragmented
+                                distribution</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=800&q=80"
+                            alt="Modern Trade" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Modern Trade</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Winning in structured retail
+                                environments</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                            alt="B2B Enterprise" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">B2B/Enterprise</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Navigating complex buying cycles
+                            </p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80"
+                            alt="Inside Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Inside Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Maximizing digital & remote
+                                conversions</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
+                            alt="Field Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Field Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Frontline execution & market
+                                penetration</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80"
+                            alt="Institutional" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Institutional</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Cracking large-scale corporate
+                                deals</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=800&q=80"
+                            alt="Govt PSU" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Govt/PSU</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Bidding & winning public sector
+                                contracts</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&q=80"
+                            alt="Direct Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Direct Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">High-impact person-to-person
+                                selling</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                            alt="Rural Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Rural Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Unlocking bottom-of-pyramid
+                                potential</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+                            alt="Project Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Project Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Managing long-lifecycle project
+                                mandates</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                            alt="Digital E-comm" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Digital/E-comm</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Optimizing online revenue funnels
+                            </p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80"
+                            alt="Key Account" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Key Account</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Strategic growth in high-value
+                                accounts</p>
+                        </div>
+                    </div>
+                    <div class="market-card group">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+                            alt="Post Sales" class="market-image">
+                        <div class="market-overlay">
+                            <h4 class="text-2xl font-bold text-white mb-1">Post-Sales</h4>
+                            <p class="text-sm text-gray-300 font-medium tracking-wide">Expansion, retention & referral
+                                growth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class=" bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-20">
+                <p class="text-brand font-bold mb-4 tracking-[0.2em] uppercase text-sm">Our Global Reach</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">Proven by
+                    Numbers.<br>Validated by <span class="text-brand">Revenue Impact.</span></h2>
+                <div class="w-24 h-1.5 bg-brand mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20" id="stats-section">
+                <!-- Stat 1 -->
+                <div
+                    class="group p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-brand/30 hover:shadow-xl hover:shadow-brand/5 transition-all duration-500 text-center">
+                    <div
+                        class="w-16 h-16 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-black text-gray-900 mb-3"><span class="stat-number"
+                            data-target="15">0</span>+</div>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-[10px] leading-tight">Years In
+                        Sales<br>Performance</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div
+                    class="group p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-brand/30 hover:shadow-xl hover:shadow-brand/5 transition-all duration-500 text-center">
+                    <div
+                        class="w-16 h-16 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-building-shield"></i>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-black text-gray-900 mb-3"><span class="stat-number"
+                            data-target="500">0</span>+</div>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-[10px] leading-tight">
+                        Organizations<br>Trained</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div
+                    class="group p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-brand/30 hover:shadow-xl hover:shadow-brand/5 transition-all duration-500 text-center">
+                    <div
+                        class="w-16 h-16 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-black text-gray-900 mb-3"><span class="stat-number"
+                            data-target="480">0</span>+</div>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-[10px] leading-tight">Cities
+                        &<br>Sub-cities</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div
+                    class="group p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-brand/30 hover:shadow-xl hover:shadow-brand/5 transition-all duration-500 text-center">
+                    <div
+                        class="w-16 h-16 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-black text-gray-900 mb-3"><span class="stat-number"
+                            data-target="8">0</span>Lakh+</div>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-[10px] leading-tight">
+                        Professionals<br>Converted</p>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute inset-0 bg-brand/5 blur-3xl rounded-full"></div>
+                <div class="relative bg-gray-900 p-12 md:p-16 rounded-[2.5rem] border border-white/10 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand/10 blur-[100px] -mr-32 -mt-32 rounded-full">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand/10 blur-[100px] -ml-32 -mb-32 rounded-full">
+                    </div>
+
+                    <div class="relative z-10">
+                        <p class="text-center text-gray-400 mb-10 font-medium tracking-wide uppercase text-xs">Unmatched
+                            Expertise Across Industries</p>
+                        <div class="flex flex-wrap justify-center gap-3 mb-12">
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">FMCG</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">BFSI</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">SaaS</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">IT</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">Pharma</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">Retail</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">Manufacturing</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">Education</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">Infra</span>
+                            <span
+                                class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white/80 text-sm font-medium hover:bg-white/10 transition cursor-default">Government</span>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-white text-3xl md:text-4xl font-black mb-4 tracking-tight">Outcome:</h4>
+                            <div
+                                class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left text-white/80 text-sm font-semibold mb-6">
+                                <div><i class="fa-solid fa-arrow-trend-up text-brand mr-2"></i> Higher win rates</div>
+                                <div><i class="fa-solid fa-bolt text-brand mr-2"></i> Faster deal closures</div>
+                                <div><i class="fa-solid fa-filter text-brand mr-2"></i> Stronger pipelines</div>
+                                <div><i class="fa-solid fa-forward text-brand mr-2"></i> Stronger deal progression</div>
+                                <div><i class="fa-solid fa-percent text-brand mr-2"></i> Improved conversion ratios
+                                </div>
+                                <div><i class="fa-solid fa-bullseye text-brand mr-2"></i> More consistent sales
+                                    execution</div>
+                            </div>
+                            <h4 class="text-white text-xl md:text-2xl font-black mb-4 tracking-tight">One Definitive
+                                Outcome:</h4>
+                            <p
+                                class="text-brand text-2xl md:text-5xl font-black tracking-tight uppercase leading-tight">
+                                Predictable. Scalable. <br class="md:hidden">Sustainable Revenue Growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <!-- Why Choose KTS -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">WHY ORGANISATIONS CHOOSE KTS</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start bg-white p-4 rounded-xl shadow-sm border border-gray-100"><i
+                                class="fa-solid fa-check-circle text-brand text-xl mt-0.5 mr-4 w-6"></i> <span
+                                class="font-semibold text-gray-700">Practical, execution-focused approach</span></li>
+                        <li class="flex items-start bg-white p-4 rounded-xl shadow-sm border border-gray-100"><i
+                                class="fa-solid fa-check-circle text-brand text-xl mt-0.5 mr-4 w-6"></i> <span
+                                class="font-semibold text-gray-700">Alignment with business and revenue goals</span>
+                        </li>
+                        <li class="flex items-start bg-white p-4 rounded-xl shadow-sm border border-gray-100"><i
+                                class="fa-solid fa-check-circle text-brand text-xl mt-0.5 mr-4 w-6"></i> <span
+                                class="font-semibold text-gray-700">Customised engagement models</span></li>
+                        <li class="flex items-start bg-white p-4 rounded-xl shadow-sm border border-gray-100"><i
+                                class="fa-solid fa-check-circle text-brand text-xl mt-0.5 mr-4 w-6"></i> <span
+                                class="font-semibold text-gray-700">Focus on measurable outcomes</span></li>
+                        <li class="flex items-start bg-white p-4 rounded-xl shadow-sm border border-gray-100"><i
+                                class="fa-solid fa-check-circle text-brand text-xl mt-0.5 mr-4 w-6"></i> <span
+                                class="font-semibold text-gray-700">Integration of training with real sales
+                                scenarios</span></li>
+                        <li class="flex items-start bg-white p-4 rounded-xl shadow-sm border border-gray-100"><i
+                                class="fa-solid fa-check-circle text-brand text-xl mt-0.5 mr-4 w-6"></i> <span
+                                class="font-semibold text-gray-700">Capability building across levels (leaders to
+                                frontline)</span></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+                    <div class="absolute inset-0 z-0 opacity-20">
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-brand rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2">
+                        </div>
+                    </div>
+                    <div class="relative z-10 text-center">
+                        <i class="fa-solid fa-quote-left text-brand text-5xl mb-6 opacity-50"></i>
+                        <h2 class="text-3xl font-bold text-white mb-6 uppercase tracking-widest">CLIENT VALIDATION</h2>
+                        <h3 class="text-2xl font-bold text-brand mb-8">Our Results Are Our Marketing</h3>
+                        <p class="text-2xl text-gray-300 font-light leading-relaxed italic mb-8">"Not testimonials.
+                            Revenue stories. Performance outcomes. Business impact."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="py-20 bg-gray-900 border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">Sales-first methodology (not HR-first theory)</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">Revenue-linked learning models</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">Execution-driven design</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">Built for complex buying cycles</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">Leadership + frontline integration</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">Measurable performance metrics</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">Real role-plays, real deals, real pipelines</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">ROI-driven programs</span>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-check text-brand"></i>
+                            <span class="text-white font-medium">Business impact, not attendance certificates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <p class="text-brand font-bold mb-4 tracking-widest uppercase text-sm">FINAL CTA</p>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">Ready to Build a Scalable
+                        Revenue Engine — Not Just Train Sales?</h2>
+                    <h3 class="text-2xl font-semibold text-gray-300 mb-8">Book Your Sales Capability Strategy Call</h3>
+
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 mb-8">
+                        <p class="text-white font-bold mb-4">We will:</p>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3"></i> Diagnose
+                                your current sales system</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3"></i> Identify key
+                                challenges and gaps</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3"></i> Identify
+                                revenue leakages</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3"></i> Map
+                                conversion bottlenecks</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3"></i> Design a
+                                custom transformation journey</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3"></i> Share
+                                relevant approaches based on your context</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3"></i> Align
+                                capability building to business outcomes</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3"></i> Outline a
+                                potential capability roadmap</li>
+                        </ul>
+                    </div>
+
+                    <button onclick="scrollToTop()"
+                        class="bg-brand text-white px-10 py-4 rounded-full font-bold hover:bg-brand-dark transition shadow-lg hover:shadow-brand/20 transform hover:-translate-y-1 block md:inline-block text-center uppercase tracking-widest text-sm w-full md:w-auto">
+                        [ Book Your Strategy Call Now ]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="faq" class="py-10 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">1. What does
+                            Kaizen Training Solutions (KTS) do as a Sales Capability Transformation Partner?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            Kaizen Training Solutions (KTS) helps organizations improve sales performance through
+                            customized sales capability development, sales training programs, revenue acceleration
+                            strategies, and execution-focused coaching interventions.<br><br>
+                            Unlike generic corporate training companies, KTS focuses on improving: Sales conversions,
+                            Pipeline movement, Win rates, Sales execution consistency, Revenue growth
+                            capability.<br><br>
+                            Our approach combines: sales training + sales process improvement + manager coaching +
+                            frontline execution support to build scalable revenue systems.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">2. How is KTS
+                            different from other sales training companies in India?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            Most sales training providers focus only on classroom learning or motivational workshops.
+                            KTS focuses on:<br>
+                            - Business-aligned sales capability building<br>
+                            - Real sales execution improvement<br>
+                            - Sales leadership development<br>
+                            - On-the-job coaching<br>
+                            - Revenue-linked outcomes<br><br>
+                            We customize every engagement based on: Industry, Sales cycle complexity, Market
+                            environment, Team capability levels, Business objectives. This makes KTS suitable for
+                            organizations looking for practical and measurable sales transformation.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">3. What types of
+                            sales training programs does KTS offer?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            KTS offers a wide range of sales capability and revenue performance programs, including:<br>
+                            B2B Sales Training, Enterprise Sales Training, FMCG Sales Training, Inside Sales Training,
+                            Field Sales Training, Channel Sales Training, Key Account Management Training, Sales
+                            Leadership Development, Customer Success & Upselling Training, Retail Sales Training,
+                            Negotiation & Closing Skills Training.<br><br>
+                            Programs are available in: Classroom format, Virtual format, Hybrid learning models,
+                            On-the-job coaching formats.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">4. Does KTS
+                            provide customized sales training solutions?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            Yes. Every KTS engagement is designed specifically around the client’s: Business goals,
+                            Revenue objectives, Team structure, Sales maturity, Buyer journey, Industry
+                            requirements.<br><br>
+                            We do not use one-size-fits-all content or generic workshop models. Our customized sales
+                            capability solutions are built to improve practical execution and business performance.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">5. Which
+                            industries does KTS work with?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            KTS supports organizations across multiple industries, including: FMCG, BFSI, SaaS &
+                            Technology, Manufacturing, Pharma & Healthcare, Retail, Real Estate, Education & EdTech,
+                            Infrastructure & Project Sales, Government & PSU Sales.<br><br>
+                            We work across both B2B and B2C sales environments.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">6. Can KTS help
+                            improve sales conversions and win rates?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            Yes. Improving sales effectiveness and conversion capability is one of the primary focus
+                            areas of KTS.<br><br>
+                            Our interventions address: Discovery quality, Qualification discipline, Objection handling,
+                            Negotiation capability, Value communication, Closing consistency, Deal progression.<br><br>
+                            The goal is to help teams improve: Win ratios, Pipeline quality, Deal velocity, Sales
+                            productivity.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">7. Does KTS
+                            provide sales coaching for managers and sales leaders?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            Yes. Sales manager and sales leadership development are core components of our capability
+                            transformation approach.<br><br>
+                            We help leaders strengthen: Coaching capability, Performance management, Team productivity
+                            systems, Forecasting discipline, Accountability frameworks, Revenue ownership
+                            mindset.<br><br>
+                            Strong managers create stronger sales teams.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">8. Does KTS
+                            support frontline and field sales teams?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            Absolutely. KTS has strong experience working with: Feet-on-Street (FOS) teams, Field sales
+                            representatives, Rural sales teams, Distributor sales networks, Retail execution
+                            teams.<br><br>
+                            Programs are designed to improve: Market execution, Customer engagement, Territory
+                            management, Relationship selling, Conversion discipline.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">9. What delivery
+                            formats are available for KTS sales capability programs?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            KTS provides flexible delivery models based on business needs and team structure:<br>
+                            Classroom training, Virtual instructor-led training, Hybrid learning journeys, Live deal
+                            coaching, Field accompaniment, Sales workshops and bootcamps, Revenue kick-offs and sales
+                            conferences.<br><br>
+                            This allows organizations to scale capability development effectively across locations.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">10. How does KTS
+                            measure the effectiveness of sales capability programs?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            KTS focuses on business-linked performance indicators instead of attendance metrics
+                            alone.<br><br>
+                            Key measurement areas may include: Conversion ratios, Pipeline movement, Deal progression,
+                            Win rates, Forecast quality, Sales productivity, Manager coaching effectiveness.<br><br>
+                            Our focus is on practical adoption and measurable execution improvement.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">11. Is KTS
+                            suitable for startups, SMEs, and large enterprises?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            Yes. KTS works with: Startups, Growth-stage companies, SMEs, Large enterprises, MNCs,
+                            Institutional and government organizations.<br><br>
+                            Programs are scalable and aligned to the size, maturity, and complexity of the business.
+                            Whether you are building a sales structure from scratch or scaling an existing sales
+                            organization, KTS can support the journey.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 mb-4">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none group"
+                        onclick="toggleFaq(this)">
+                        <span class="font-bold text-gray-900 group-hover:text-brand transition-colors">12. How can we
+                            start working with Kaizen Training Solutions (KTS)?</span>
+                        <i class="fa-solid fa-plus text-brand transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-gray-50 text-gray-700">
+                        <div class="faq-inner border-t border-gray-100 px-6 py-5 text-base leading-relaxed">
+                            The process begins with a Sales Capability Strategy Discussion.<br><br>
+                            During the discussion, we: Understand your current sales environment, Identify business and
+                            capability gaps, Review sales process challenges, Explore performance improvement
+                            opportunities, Recommend a suitable capability roadmap.<br><br>
+                            This helps create a focused and outcome-aligned transformation approach for your
+                            organization.<br>
+                            👉 <strong class="text-brand">Contact KTS to schedule your strategy discussion.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button onclick="openModal()"
+                    class="inline-block bg-brand text-white px-8 py-3 rounded-full font-bold transition-all border border-brand hover:bg-white hover:text-brand shadow-lg">
+                    Still have questions? Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-20 pb-10 border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div class="col-span-2 md:col-span-1">
+                    <a href="#" class="flex items-center mb-6">
+                        <img src="https://kaizentrainingsolutions.com/assets/img/logos/KTSOB.png"
+                            alt="Kaizen Training Solutions" class="h-10 brightness-0 invert">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
+                        <span class="text-white font-bold block mb-2 text-base">Build capability. Increase win rates.
+                            Scale revenue. Lead your market.</span>
+                        We Build Revenue Capability That Scales. Building high-performance sales cultures across the
+                        globe.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/kaizen-training-solutions"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand transition duration-300 border border-white/10">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Solutions Column -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Solutions</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="#diagnostic" class="hover:text-brand transition">Revenue Diagnostics</a></li>
+                        <li><a href="#offerings" class="hover:text-brand transition">Performance Classrooms</a></li>
+                        <li><a href="#offerings" class="hover:text-brand transition">On-the-Job Coaching</a></li>
+                        <li><a href="#offerings" class="hover:text-brand transition">Sales Intensives</a></li>
+                        <li><a href="#offerings" class="hover:text-brand transition">Revenue Events</a></li>
+                    </ul>
+                </div>
+
+                <!-- Expertise Column -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Expertise</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="#who-we-build" class="hover:text-brand transition">Who We Build</a></li>
+                        <li><a href="#markets" class="hover:text-brand transition">Markets Covered</a></li>
+                        <li><a href="#impact" class="hover:text-brand transition">Our Impact</a></li>
+                        <li><a href="#approach" class="hover:text-brand transition">Our Approach</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Column -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Support</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="#faq" class="hover:text-brand transition">Frequently Asked Questions</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal()" class="hover:text-brand transition">Book
+                                Strategy Call</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal()"
+                                class="hover:text-brand transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">&copy; 2026 Kaizen Training Solutions. All rights reserved.</p>
+                <div class="flex gap-6 text-gray-500 text-xs">
+                    <a href="#" class="hover:text-brand transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="leadModal" class="fixed inset-0 z-[60] invisible opacity-0 transition-opacity duration-300 ease-in-out"
+        aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm" onclick="closeModal()">
+        </div>
+
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div class="relative transform scale-95 opacity-0 transition-all duration-300 ease-out sm:my-8 sm:w-full sm:max-w-lg bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border-t-8 border-brand overflow-hidden"
+                id="modal-panel">
+
+                <div class="absolute top-4 right-4 z-10">
+                    <button onclick="closeModal()" type="button"
+                        class="bg-white/20 rounded-full p-2 text-white hover:text-gray-100 focus:outline-none hover:bg-white/30 transition">
+                        <span class="sr-only">Close</span>
+                        <i class="fa-solid fa-xmark text-xl w-6 h-6 flex items-center justify-center"></i>
+                    </button>
+                </div>
+
+                <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-left sm:ml-4 sm:mt-0 w-full">
+                            <h3 class="text-2xl font-bold leading-6 text-white mb-2" id="modal-title">Get In Touch
+                            </h3>
+                            <p class="text-sm text-gray-200 mb-6">Fill out the form below and our team will get back to
+                                you within 24 hours.</p>
+
+                            <form onsubmit="handleFormSubmit(event)" class="space-y-3">
+                                <div class="grid grid-cols-1 gap-3">
+                                    <div>
+                                        <label class="block text-gray-200 text-xs font-semibold mb-1">Name</label>
+                                        <input type="text" name="name" required
+                                            class="w-full px-3 py-2 text-sm bg-white/90 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
+                                            placeholder="Name">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="block text-gray-200 text-xs font-semibold mb-1">Email</label>
+                                        <input type="email" name="user_email" required
+                                            class="w-full px-3 py-2 text-sm bg-white/90 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
+                                            placeholder="Email">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-200 text-xs font-semibold mb-1">Phone</label>
+                                        <input type="tel" name="user_phone" required maxlength="10"
+                                            class="w-full px-3 py-2 text-sm bg-white/90 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
+                                            placeholder="Phone">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label
+                                            class="block text-gray-200 text-xs font-semibold mb-1">Designation</label>
+                                        <input type="text" name="designation" required
+                                            class="w-full px-3 py-2 text-sm bg-white/90 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
+                                            placeholder="Job Title">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-200 text-xs font-semibold mb-1">Company</label>
+                                        <input type="text" name="company_name" required
+                                            class="w-full px-3 py-2 text-sm bg-white/90 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
+                                            placeholder="Company">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-200 text-xs font-semibold mb-1">Industry</label>
+                                    <input type="text" name="industry" required list="industry-list"
+                                        class="w-full px-3 py-2 text-sm bg-white/90 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
+                                        placeholder="Select or Type Industry">
+                                </div>
+
+                                <div class="flex items-start">
+                                    <p class="text-[10px] text-center text-gray-300 w-full">I agree to the Terms &
+                                        Conditions and authorize Kaizen Training Solutions to contact me.</p>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-brand text-white py-3 rounded-lg font-bold hover:bg-brand-dark transition shadow-lg mt-4">
+                                    Send Enquiry
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919717275572?text=Hi%20Kaizen" target="_blank"
+        class="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#128C7E] transition transform hover:scale-110 animate-bounce">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn"
+        class="fixed hidden md:block bottom-32 left-4 md:bottom-12 md:left-8 z-40 bg-brand text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-brand-dark transition-all duration-300 opacity-0 invisible transform translate-y-10 hover:scale-110">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <div id="mobile-sticky-btn"
+        class="fixed bottom-0 left-0 w-full z-40 p-4 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden transform translate-y-full transition-transform duration-300">
+        <button onclick="openModal()" class="w-full bg-brand text-white font-bold py-3 rounded-lg shadow-lg">
+            Book Now
+        </button>
+    </div>
+
+    <!-- Global Datalist for Industries -->
+    <datalist id="industry-list">
+        <option value="IT & Software">
+        <option value="Manufacturing">
+        <option value="Education & Training">
+        <option value="Banking & Finance">
+        <option value="Healthcare">
+        <option value="Retail">
+        <option value="Construction">
+        <option value="Telecommunications">
+        <option value="Automotive">
+        <option value="Real Estate">
+        <option value="Logistics & Supply Chain">
+        <option value="Consulting">
+        <option value="Media & Entertainment">
+        <option value="Energy & Utilities">
+        <option value="Government / Public Sector">
+        <option value="Non-Profit / NGO">
+        <option value="Other">
+    </datalist>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
