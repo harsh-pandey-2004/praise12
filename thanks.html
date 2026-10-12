@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Kaizen Training Solutions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#ec693d',
+                        'brand-dark': '#d3542a',
+                    },
+                    fontFamily: {
+                        heading: ['"DM Sans"', 'sans-serif'],
+                        sans: ['"Open Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md w-full z-50">
+        <div class="container mx-auto px-6 max-w-7xl py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="https://kaizentrainingsolutions.com/assets/img/logos/KTSOB.png"
+                    alt="Kaizen Training Solutions" class="h-12 md:h-14">
+            </a>
+            <a href="index.html" class="text-brand font-semibold hover:underline">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center px-6 py-20">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl max-w-2xl text-center border-t-8 border-brand">
+            <div
+                class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600 animate-pulse">
+                <i class="fa-solid fa-check text-4xl"></i>
+            </div>
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Thank You!</h1>
+            <p class="text-xl text-gray-600 mb-8">
+                Your enquiry has been submitted successfully. Our team will get back to you shortly.
+            </p>
+            <a href="index.html"
+                class="inline-block bg-brand text-white px-8 py-3 rounded-lg font-bold hover:bg-brand-dark transition shadow-lg hover:shadow-xl">
+                Return to Homepage
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 max-w-7xl text-center">
+            <div class="flex justify-center mb-6">
+                <img src="https://kaizentrainingsolutions.com/assets/img/logos/KTSOB.png"
+                    alt="Kaizen Training Solutions" class="h-8 brightness-0 invert">
+            </div>
+            <p class="text-gray-500 text-xs">&copy; 2025 Kaizen Training Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
